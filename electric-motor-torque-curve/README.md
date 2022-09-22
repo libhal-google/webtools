@@ -29,8 +29,12 @@
 
 - Max torque
 - Max current
+- Max power
 - A motor torque curve graph
 
 ## Limited
 
 - Limited torque
+- RPM @ Limited Torque
+- Power @ Limited Torque
+- Limited Electrical Power (W)
