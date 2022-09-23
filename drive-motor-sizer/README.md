@@ -8,7 +8,7 @@
 
 ### Velocity Requirement
 
-- Desired Velocity
+- Desired Linear Velocity
 
 ### Torque Requirement
 
