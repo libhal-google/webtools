@@ -1,3 +1,5 @@
+
+
 // const selectElement = document.getElementById('.calc-1');
 // selectElement.addEventListener('change', (event) => {
 //   const result = document.querySelector('.result');
@@ -264,3 +266,6 @@ window.addEventListener('load', (event) => {
 // file:///Users/asci-blue/Workspace/webtools/electric-motor-torque-curve/index.html?voltage-rated=67&voltage-supplied=1&no-load-torque=1&rated-torque=3&no-load-speed=1&rated-speed=1&no-load-current=1&rated-current=1
 
 //file:///Users/asci-blue/Workspace/webtools/electric-motor-torque-curve/index.html?voltage-rated=1&voltage-supplied=1&no-load-torque=1&rated-torque=3&no-load-speed=1&rated-speed=1&no-load-current=1&rated-current=1
+
+
+//
