@@ -10,8 +10,7 @@
 
 <p>
 
-
-  <label for ="calc-1">First Calc:</label>
+  <label for ="calc-1">Voltage (Rated):</label>
       <input type="text" id="calc-1" >
       <select>
           <option selected="selected" value="select1">kg</option>
@@ -22,7 +21,7 @@
 
 
 
-  <label for="calc-2">Second Calc:</label>
+  <label for="calc-2">Voltage (Supplied):</label>
   <input type="text" id="calc-2" name="calc-2">
         <select>
           <option selected="selected" value="select1">kg</option>
@@ -31,24 +30,84 @@
       </select>
         <br><br>
 
+  <label for="no_load_torque">No load Torque (Nm):</label>
+  <input type="text" id="no_load_torque" name="no_load_torque">
+        <select>
+          <option selected="selected" value="select1">kg</option>
+          <option value = "cva2">lbs</option>
+          <option value = "cva3">g</option>
+      </select>
+        <br><br>
+
+
+  <label for="rated_torque">Rated Torque (Nm):</label>
+  <input type="text" id="rated_torque" name="rated_torque">
+        <select>
+          <option selected="selected" value="select1">kg</option>
+          <option value = "cva2">lbs</option>
+          <option value = "cva3">g</option>
+      </select>
+        <br><br>
+
+  <label for="no_load_speed">No load Speed (RPM):</label>
+  <input type="text" id="no_load_speed" name="no_load_speed">
+        <select>
+          <option selected="selected" value="select1">kg</option>
+          <option value = "cva2">lbs</option>
+          <option value = "cva3">g</option>
+      </select>
+        <br><br>
+
+  <label for="rated_speed">Rated Speed (RPM):</label>
+  <input type="text" id="rated_speed" name="rated_speed">
+        <select>
+          <option selected="selected" value="select1">kg</option>
+          <option value = "cva2">lbs</option>
+          <option value = "cva3">g</option>
+      </select>
+        <br><br>
+  <label for="no_load_current">No load Current (Amp):</label>
+  <input type="text" id="no_load_current" name="no_load_current">
+        <select>
+          <option selected="selected" value="select1">kg</option>
+          <option value = "cva2">lbs</option>
+          <option value = "cva3">g</option>
+      </select>
+        <br><br>
+
+
+  <label for="rated_current">Rated Current (Amp):</label>
+  <input type="text" id="rated_current" name="rated_current">
+        <select>
+          <option selected="selected" value="select1">kg</option>
+          <option value = "cva2">lbs</option>
+          <option value = "cva3">g</option>
+      </select>
+        <br><br>
 </p>
 
 
 ----------------------------------------
 
-
 <h1>Output</h1>
 <p>
     
 <p>Math in Action</p>
-<code id = "display1"></code> + <code id = "display2"></code>
+<code id = "display1"></code> + 
+<code id = "display2"></code> + 
+<code id = "display_no_load_torque"></code> + 
+<code id = "display_rated_torque"></code> +
+<code id = "display_no_load_speed"></code> +
+<code id = "display_rated_speed"></code> +
+<code id = "display_no_load_current"></code> +
+<code id = "display_rated_current"></code>  
 
 
-<pH>Result is </p>
+<h3>Result</h3>
   
     <code id="result"></code>
-
-
+<br><br><br>
+<button>Share Results</button>
 
 </p>
 
