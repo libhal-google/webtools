@@ -120,3 +120,38 @@ input_operating_time.addEventListener("click", updateInput_operating_time);
 
 input_efficiency.addEventListener("change", updateInput_efficiency);
 input_efficiency.addEventListener("click", updateInput_efficiency);
+
+//URL parameters
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+
+const url_total_mass = new urlParams.get("total-mass");
+const url_num_wheels = new urlParams.get("num-wheels");
+const url_wheel_radius = new urlParams.get("wheel-radius");
+const url_linear_velocity = new urlParams.get("linear-velocity");
+const url_acceleration = new urlParams.get("acceleration");
+const url_maximum_incline = new urlParams.get("maximum-incline");
+const url_operating_time = new urlParams.get("operating-time");
+const url_efficiency = new urlParams.get("efficiency");
+
+window.addEventListener("load", (event) => {
+    input_total_mass = url_total_mass;
+    input_num_wheels = url_num_wheels;
+    input_wheel_radius = url_wheel_radius;
+    input_linear_velocity = url_linear_velocity;
+    input_acceleration = url_acceleration;
+    input_maximum_incline = url_maximum_incline;
+    input_operating_time = url_operating_time;
+    input_efficiency = url_efficiency;
+
+    display_total_mass.textContent = url_total_mass;
+    display_num_wheels.textContent = url_num_wheels;
+    display_wheel_radius.textContent = url_wheel_radius;
+    display_linear_velocity.textContent = url_linear_velocity;
+    display_acceleration.textContent = url_acceleration;
+    display_maximum_incline.textContent = url_maximum_incline;
+    display_operating_time.textContent = url_operating_time;
+    display_efficiency.textContent = url_efficiency;
+
+    Calculate();
+});
