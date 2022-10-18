@@ -7,10 +7,10 @@ var var_maximum_incline = 0;
 var var_operating_time = 0;
 var var_efficiency = 0;
 
-//replace with actual outputs later
+// replace with actual outputs later
 var sum = 0;
 
-//initializing variables with document elements
+// initializing variables with document elements
 const input_total_mass = document.getElementById("total_mass");
 const input_num_wheels = document.getElementById("num_wheels");
 const input_wheel_radius = document.getElementById("wheel_rad");
@@ -20,7 +20,7 @@ const input_maximum_incline = document.getElementById("max_incline");
 const input_operating_time = document.getElementById("op_time");
 const input_efficiency = document.getElementById("efficiency");
 
-//math in action
+// math in action
 const display_total_mass = document.getElementById("display_total_mass");
 const display_num_wheels = document.getElementById("display_num_wheels");
 const display_wheel_radius = document.getElementById("display_wheel_rad");
@@ -47,7 +47,7 @@ function Calculate(e) {
     return sum;
 }
 
-//display
+// display
 function updateInput_total_mass(e) {
     var_total_mass = parseFloat(e.target.value);
     display_total_mass.textContent = e.target.value;
@@ -96,7 +96,7 @@ function updateInput_efficiency(e) {
     Calculate();
 }
 
-//event listeners
+// event listeners
 input_total_mass.addEventListener("change", updateInput_total_mass);
 input_total_mass.addEventListener("click", updateInput_total_mass);
 
@@ -123,16 +123,16 @@ input_efficiency.addEventListener("click", updateInput_efficiency);
 
 //URL parameters
 const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
+const urlParams = URLSearchParams(queryString);
 
-const url_total_mass = new urlParams.get("total-mass");
-const url_num_wheels = new urlParams.get("num-wheels");
-const url_wheel_radius = new urlParams.get("wheel-radius");
-const url_linear_velocity = new urlParams.get("linear-velocity");
-const url_acceleration = new urlParams.get("acceleration");
-const url_maximum_incline = new urlParams.get("maximum-incline");
-const url_operating_time = new urlParams.get("operating-time");
-const url_efficiency = new urlParams.get("efficiency");
+const url_total_mass = urlParams.get("total-mass");
+const url_num_wheels = urlParams.get("num-wheels");
+const url_wheel_radius = urlParams.get("wheel-radius");
+const url_linear_velocity = urlParams.get("linear-velocity");
+const url_acceleration = urlParams.get("acceleration");
+const url_maximum_incline = urlParams.get("maximum-incline");
+const url_operating_time = urlParams.get("operating-time");
+const url_efficiency = urlParams.get("efficiency");
 
 window.addEventListener("load", (event) => {
     input_total_mass = url_total_mass;
