@@ -3,9 +3,12 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="main.css" />
+    <script src="https://cdn.plot.ly/plotly-2.20.0.min.js"></script>
+
 </head>
 
 <body>
+
     <h1>Input</h1>
 
     <p>
@@ -63,26 +66,85 @@
         <input type="text" id="rated_current" name="rated_current" />
         <br />
         <br />
+
+        <label for="target_torque">Target Torque (Nm):</label>
+        <input type="text" id="target_torque" name="target_torque" />
+        <br />
+        <br>
+
+        <button onclick="execute();">Submit</button>
+        <br />
+
     </p>
 
-    ----------------------------------------
-
-    <h1>Output</h1>
-    <p></p>
-
-    <p>Math in Action</p>
-    <code id="display_voltage_rated"></code> + <code id="display_voltage_supplied"></code> + <code
+    <!-- <code id="display_voltage_rated"></code> + <code id="display_voltage_supplied"></code> + <code
         id="display_no_load_torque"></code> + <code id="display_rated_torque"></code> + <code
         id="display_no_load_speed"></code> +
     <code id="display_rated_speed"></code> + <code id="display_no_load_current"></code> +
-    <code id="display_rated_current"></code>
-
-    <h3>Result</h3>
+    <code id="display_rated_current"></code> -->
 
     <code id="result"></code>
-    <br />
-    <br />
-    <br />
+    <h1>Output</h1>
+    <h2>Math in Action</h2>
+
+    <p>Max Torque:</p>
+
+
+    <br>
+    <br>
+
+    <p>Max Current:</p>
+
+    <br>
+    <br>
+
+    <p>Max Power:</p>
+
+
+    <br>
+    <br>
+
+    <p> Motor Torque graph</p>
+    <div id="Motor_Torque" style="width:600px;height:600px;"></div>
+
+    <br>
+    <br>
+
+
+    <h2>Results:</h2>
+
+    <p> Max Torque:</p>
+    <code id="max_torque"></code>
+    <br>
+    <br>
+
+    <p> Max Current:</p>
+    <code id="max_current"></code>
+    <br>
+    <br>
+
+    <p> Max Power:</p>
+    <code id="max_power"></code>
+    <br>
+    <br>
+
+    <h2>Limited Torque</h2>
+
+    <p> RPM @ Limited Torque:</p>
+    <code id="limited_RPM"></code>
+    <br>
+    <br>
+
+    <p> Power @ Limited Torque:</p>
+    <code id="limited_Power"></code>
+    <br>
+    <br>
+
+    <p> Limited Electrical Power [W]:</p>
+    <code id="limited_electrical"></code>
+    <br>
+    <br>
+
     <button>Share Results</button>
 
     <br />
