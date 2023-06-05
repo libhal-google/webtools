@@ -129,6 +129,10 @@ function updateInput_efficiency(e) {
     Calculate();
 }
 
+function shareResults() {
+    navigator.clipboard.writeText(window.location.href);
+}
+
 // event listeners
 input_total_mass.addEventListener("change", updateInput_total_mass);
 input_total_mass.addEventListener("click", updateInput_total_mass);
