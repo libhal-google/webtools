@@ -9,7 +9,7 @@
         <p>
             <form>
                 <label for="total_mass">Total Mass:</label>
-                <input type="text" id="total_mass" name="total_mass">
+                <input type="text" placeholder="1" id="total_mass" name="total_mass">
                 <select>
                     <option value="kg" selected>kg</option>
                     <option value="lbs">lbs</option>
@@ -19,13 +19,13 @@
                 <br>
 
                 <label for="num_wheels">Number of Drive Wheels:</label>
-                <input type="text" id="num_wheels" name="num_wheels">
+                <input type="text" placeholder="1" id="num_wheels" name="num_wheels">
                 <!--no kg/lbs/g because wheels-->
                 <br>
                 <br>
 
                 <label for="wheel_rad">Wheel Radius:</label>
-                <input type="text" id="wheel_rad" name="wheel_rad">
+                <input type="text" placeholder="1" id="wheel_rad" name="wheel_rad">
                 <select>
                     <option value="m" selected>m</option>
                     <option value="in">in</option>
@@ -35,7 +35,7 @@
                 <br>
 
                 <label for="lin_velocity">Linear Velocity:</label>
-                <input type="text" id="lin_velocity" name="lin_velocity">
+                <input type="text" placeholder="1" id="lin_velocity" name="lin_velocity">
                 <select>
                     <option value="m/s" selected>m/s</option>
                     <option value="ft/s">ft/s</option>
@@ -44,19 +44,19 @@
                 <br>
 
                 <label for="max_incline">Maximum Incline:</label>
-                <input type="text" id="max_incline" name="max_incline">
+                <input type="text" placeholder="1" id="max_incline" name="max_incline">
                 <!--only in degrees-->
                 <br>
                 <br>
 
                 <label for="supply_voltage">Supply Voltage [V]:</label>
-                <input type="text" id="supply_voltage" name="supply_voltage">
+                <input type="text" placeholder="1" id="supply_voltage" name="supply_voltage">
                 <!--only in V-->
                 <br>
                 <br>
 
                 <label for="acceleration">Acceleration:</label>
-                <input type="text" id="acceleration" name="acceleration">
+                <input type="text" placeholder="1" id="acceleration" name="acceleration">
                 <select>
                     <option value="m/s^2" selected>m/s^2</option>
                     <option value="ft/s^2">ft/s^2</option>
@@ -65,7 +65,7 @@
                 <br>
 
                 <label for="op_time">Operating Time:</label>
-                <input type="text" id="op_time" name="op_time">
+                <input type="text" placeholder="1" id="op_time" name="op_time">
                 <select>
                     <option value="min" selected>min</option>
                     <option value="hrs">hrs</option>
@@ -74,7 +74,7 @@
                 <br>
 
                 <label for="efficiency">Efficiency:</label>
-                <input type="text" id="efficiency" name="efficiency">
+                <input type="text" placeholder="1" id="efficiency" name="efficiency">
                 <!-- in % only-->
                 <br>
                 <br>
@@ -154,7 +154,7 @@
         <!--only in Ah-->
         <br>
         <br>
-        <button>Share Results</button>
+        <button onClick="shareResults()">Share Results</button>
         <br>
 
         <script src="main.js"></script>
