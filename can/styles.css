@@ -1,0 +1,168 @@
+/*
+ * Copyright 2023 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+:root {
+  --accent: rgb(0, 166, 255);
+  --primary: #3b3c3d;
+  --secondary: white;
+  --padding: .6rem;
+  --border-radius: 5px;
+}
+
+@font-face {
+  font-family: 'VT323';
+  src: url(third_party/google_fonts/VT323/VT323-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Press Start 2P';
+  src: url(third_party/google_fonts/Press_Start_2P/PressStart2P-Regular.ttf);
+}
+
+* {
+  font-family: 'VT323', monospace;
+  font-size: 1.05rem;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+  padding: 0 var(--padding);
+}
+
+nav {
+  color: var(--secondary);
+  border-bottom: 1px solid var(--primary);
+}
+
+h1 {
+  font-size: 1.2rem;
+  color: var(--accent);
+  text-shadow: 1px 1px 2px black, 0 0 1em var(--accent), 0 0 0.2em var(--accent);
+  font-family: 'Press Start 2P', monospace;
+}
+h1 sub {
+  font-size: 0.60rem;
+  color: var(--accent);
+  text-shadow: 1px 1px 2px black, 0 0 1em var(--accent), 0 0 0.2em var(--accent);
+  font-family: 'Press Start 2P', monospace;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+h3 {
+  color: var(--accent);
+  border-bottom: var(--primary) 1px solid;
+}
+
+button {
+  border: none;
+  color: var(--secondary);
+  padding: var(--padding);
+  background-color: inherit;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 1px 0 rgba(255, 255, 255, 0.41), 0 2.5rem 5rem 0 rgba(255, 255, 255, 0.1);
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 0 2px 1px 0 var(--accent), 0 2.5rem 5rem 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+input[type="checkbox"]:not(:disabled):hover {
+  cursor: pointer;
+  box-shadow: 0 0px 5px 0 var(--accent), 0 2.5rem 5rem 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+input,
+#baudrate-label {
+  border: none;
+  color: var(--primary);
+  padding: var(--padding);
+  accent-color: var(--accent);
+  background-color: var(--secondary);
+  border-radius: var(--border-radius);
+}
+
+input:focus {
+  outline: none;
+}
+
+dialog {
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: 1px 1px 2px black, 0 0 1em gray, 0 0 0.2em gray;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.orange-btn {
+  color: orange !important;
+}
+
+.close-btn{
+  right: 0;
+  margin: 0;
+  box-shadow: none;
+  font-size: 1.5rem;
+  position: absolute;
+}
+
+.close-btn:hover {
+  color: var(--accent);
+  box-shadow: none !important;
+}
+
+.flex-spaced {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-spaced>* {
+  margin: .25rem;
+}
+
+.btn-group>* {
+  margin: .25rem;
+}
+
+#baudrate {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+/* #serial-input {
+  flex-grow: 1;
+} */
+
+#connect-btn {
+  color: var(--accent);
+}
+
+#terminal {
+  height: 78vh;
+  margin: 0 var(--padding);
+}

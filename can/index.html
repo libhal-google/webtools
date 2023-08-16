@@ -1,0 +1,188 @@
+<!--
+  Copyright 2023 Google LLC
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="libhal" />
+    <meta
+      name="description"
+      content="Web interface for CANable compatible devices."
+    />
+    <title>CANable Web</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="third_party/xterm/xterm.css" />
+  </head>
+
+  <body class="grid">
+    <nav class="flex-spaced">
+      <h1>CANable Web<sub>v1.0</sub></h1>
+      <div class="btn-group">
+        <label
+          >Checkbox 1
+          <input id="dtr-checkbox" type="checkbox" disabled />
+        </label>
+        <label
+          >Checkbox 2
+          <input id="rts-checkbox" type="checkbox" disabled />
+        </label>
+        <button id="options-btn" type="button">Options</button>
+        <button id="help-btn" type="button">Help</button>
+        <button id="clear-btn" type="button">Clear Console</button>
+        <button id="connect-btn" type="button">Connect</button>
+      </div>
+    </nav>
+
+    <main>
+      <div id="serial-group" class="flex-spaced">
+        <input
+          id="id"
+          type="text"
+          list="command-history"
+          placeholder="0000"
+          style="width: 4ch"
+        />
+        <input
+          id="serial-input"
+          type="text"
+          list="command-history"
+          placeholder="00"
+          style="width: 2ch"
+        />
+        <input
+          id="serial-input"
+          type="text"
+          list="command-history"
+          placeholder="00"
+          style="width: 2ch"
+        />
+        <input
+          id="serial-input"
+          type="text"
+          list="command-history"
+          placeholder="00"
+          style="width: 2ch"
+        />
+        <input
+          id="serial-input"
+          type="text"
+          list="command-history"
+          placeholder="00"
+          style="width: 2ch"
+        />
+        <input
+          id="serial-input"
+          type="text"
+          list="command-history"
+          placeholder="00"
+          style="width: 2ch"
+        />
+        <input
+          id="serial-input"
+          type="text"
+          list="command-history"
+          placeholder="00"
+          style="width: 2ch"
+        />
+        <div class="btn-group">
+          <button id="send-btn" type="button">Send</button>
+        </div>
+      </div>
+      <div id="terminal"></div>
+    </main>
+
+    <dialog id="options-dialog">
+      <div class="flex-spaced">
+        <h2>Options</h2>
+        <button id="close-options-dialog-btn" class="close-btn" type="button">
+          &times;
+        </button>
+      </div>
+      <div>
+        <h3>Serial</h3>
+        <button id="clear-history-btn">Clear Serial History</button>
+      </div>
+    </dialog>
+
+    <dialog id="help-dialog">
+      <div class="flex-spaced">
+        <h2>Help</h2>
+        <button id="close-help-dialog-btn" class="close-btn" type="button">
+          &times;
+        </button>
+      </div>
+      <div>
+        <h3>Connecting Your Device</h3>
+        <ol>
+          <li>Connect device to USB port</li>
+          <li>Set the correct baud rate for your device</li>
+          <li>Click connect and select your device</li>
+        </ol>
+        <h3>Serial Baud Rate</h3>
+        <ul>
+          <li>
+            Determines the rate at which bits are sent and received to your
+            device
+          </li>
+          <li>
+            One baud represents one bit of information transferred per second
+          </li>
+          <li>Common baud rates: 9600, 38400, 57600, 115200</li>
+        </ul>
+        <h3>Carriage Return(CR) & New Line(NL)</h3>
+        <ul>
+          <li>CR checked appends \r to your serial data</li>
+          <li>NL checked appends \n to your serial data</li>
+        </ul>
+        <h3>Local Echo</h3>
+        <ul>
+          <p>
+            Select this option to see all of the data typed or sent to the
+            device over the terminal. Will show up in green.
+          </p>
+        </ul>
+      </div>
+    </dialog>
+
+    <dialog id="upload-dialog">
+      <div class="flex-spaced">
+        <h2>Upload File</h2>
+        <button id="close-upload-dialog-btn" class="close-btn" type="button">
+          &times;
+        </button>
+      </div>
+      <div class="flex-spaced">
+        <input id="serial-file" type="file" accept=".txt, .hex" class="" />
+        <div class="btn-group">
+          <button id="serial-upload" type="submit">Upload</button>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="third_party/xterm/xterm.js"></script>
+    <script src="third_party/xterm/xterm-addon-fit.js"></script>
+    <script src="third_party/xterm/xterm-addon-web-links.js"></script>
+    <script src="serial.js"></script>
+    <script src="flags.js"></script>
+    <script src="term.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
