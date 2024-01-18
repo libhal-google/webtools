@@ -1,4 +1,4 @@
-// Copyright 2023 Google LLC
+// Copyright 2024 Khalil Estell
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -22,10 +22,10 @@ let term = new Terminal({
   fontSize: 18,
   theme: {
     green: "lime",
-  }
+  },
 });
 
-term.open(document.getElementById('terminal'));
+term.open(document.getElementById("terminal"));
 const fit_addon = new FitAddon.FitAddon();
 term.loadAddon(fit_addon);
 term.loadAddon(new WebLinksAddon.WebLinksAddon());
@@ -56,14 +56,13 @@ term.onData(function (data) {
     case RIGHT:
       break; // TODO: Handle arrow keys like #serial-input
     default:
-      if(flags.get("local-echo-select")) {
-        term.write('\x1b[32m' + data + '\x1b[0m');
+      if (flags.get("local-echo-select")) {
+        term.write("\x1b[32m" + data + "\x1b[0m");
       }
       writeCharacterToDevice(data);
       break;
   }
 });
-
 
 function clearTerminal() {
   input = "";

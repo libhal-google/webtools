@@ -1,5 +1,5 @@
 /*
- * Copyright 2023 Google LLC
+ * Copyright 2024 Khalil Estell
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,22 +18,22 @@
   --accent: rgb(0, 166, 255);
   --primary: #3b3c3d;
   --secondary: white;
-  --padding: .6rem;
+  --padding: 0.6rem;
   --border-radius: 5px;
 }
 
 @font-face {
-  font-family: 'VT323';
+  font-family: "VT323";
   src: url(third_party/google_fonts/VT323/VT323-Regular.ttf);
 }
 
 @font-face {
-  font-family: 'Press Start 2P';
+  font-family: "Press Start 2P";
   src: url(third_party/google_fonts/Press_Start_2P/PressStart2P-Regular.ttf);
 }
 
 * {
-  font-family: 'VT323', monospace;
+  font-family: "VT323", monospace;
   font-size: 1.05rem;
 }
 
@@ -56,13 +56,13 @@ h1 {
   font-size: 1.2rem;
   color: var(--accent);
   text-shadow: 1px 1px 2px black, 0 0 1em var(--accent), 0 0 0.2em var(--accent);
-  font-family: 'Press Start 2P', monospace;
+  font-family: "Press Start 2P", monospace;
 }
 h1 sub {
-  font-size: 0.60rem;
+  font-size: 0.6rem;
   color: var(--accent);
   text-shadow: 1px 1px 2px black, 0 0 1em var(--accent), 0 0 0.2em var(--accent);
-  font-family: 'Press Start 2P', monospace;
+  font-family: "Press Start 2P", monospace;
 }
 
 h2 {
@@ -80,17 +80,20 @@ button {
   padding: var(--padding);
   background-color: inherit;
   border-radius: var(--border-radius);
-  box-shadow: 0 2px 1px 0 rgba(255, 255, 255, 0.41), 0 2.5rem 5rem 0 rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 1px 0 rgba(255, 255, 255, 0.41),
+    0 2.5rem 5rem 0 rgba(255, 255, 255, 0.1);
 }
 
 button:hover {
   cursor: pointer;
-  box-shadow: 0 2px 1px 0 var(--accent), 0 2.5rem 5rem 0 rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 2px 1px 0 var(--accent),
+    0 2.5rem 5rem 0 rgba(255, 255, 255, 0.1) !important;
 }
 
 input[type="checkbox"]:not(:disabled):hover {
   cursor: pointer;
-  box-shadow: 0 0px 5px 0 var(--accent), 0 2.5rem 5rem 0 rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 0px 5px 0 var(--accent),
+    0 2.5rem 5rem 0 rgba(255, 255, 255, 0.1) !important;
 }
 
 input,
@@ -121,7 +124,7 @@ dialog::backdrop {
   color: orange !important;
 }
 
-.close-btn{
+.close-btn {
   right: 0;
   margin: 0;
   box-shadow: none;
@@ -141,12 +144,12 @@ dialog::backdrop {
   justify-content: space-between;
 }
 
-.flex-spaced>* {
-  margin: .25rem;
+.flex-spaced > * {
+  margin: 0.25rem;
 }
 
-.btn-group>* {
-  margin: .25rem;
+.btn-group > * {
+  margin: 0.25rem;
 }
 
 #baudrate {
